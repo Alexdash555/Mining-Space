@@ -6,8 +6,8 @@
     <title>Unity WebGL Player | Mining Space</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <!-- Consolidated Content Security Policy to enhance security -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
+    <!-- Updated Content Security Policy to remove unsafe-eval -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self';">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -26,27 +26,18 @@
       </div>
     </div>
 
-    <!-- Example Form: Correct Usage of Labels -->
     <form id="player-form">
-      <!-- Label correctly associated with 'playerName' input field -->
       <label for="playerName">Player Name:</label>
       <input type="text" id="playerName" name="playerName" required>
-
-      <!-- Label correctly associated with 'email' input field -->
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
-
-      <!-- Label correctly associated with 'country' select field -->
       <label for="country">Country:</label>
       <select id="country" name="country">
         <option value="usa">USA</option>
         <option value="canada">Canada</option>
       </select>
-
-      <!-- Label correctly associated with 'bio' textarea field -->
       <label for="bio">Biography:</label>
       <textarea id="bio" name="bio"></textarea>
-
       <button type="submit">Submit</button>
     </form>
 
@@ -113,7 +104,7 @@
             unityInstance.SetFullscreen(1);
           };
         }).catch((message) => {
-          unityShowBanner(message, 'error');  // Using the enhanced error display function
+          unityShowBanner(message, 'error');
         });
       };
 
