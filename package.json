@@ -1,0 +1,17 @@
+{
+  "name": "mining-space",
+  "version": "1.0.0",
+  "description": "A mining space game ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.17.1",
+    "node-telegram-bot-api": "^0.66.0",
+    "telegraf": "^4.16.3"
+  }
+}
